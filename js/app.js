@@ -80,3 +80,12 @@ const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
     //     alert("Hooray!")
     // }
 })()
+
+var geoLocation = document.getElementById("geolocation-heading-one");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    geoLocation.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}

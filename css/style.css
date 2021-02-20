@@ -9,7 +9,7 @@ body {
 }
 
 .s1 {
-  background-image: url("./img/golden.jpg");
+  background-image: url("../img/bg.jpg");
   /* background: url("./vid/rainy.mp4"); */
   background-size: cover;
 }
