@@ -1,13 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./fullpage.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Fullpage</title>
+  </head>
+
+  <body>
+    <div id="fullpage">
+      <section class="section s1 bg-dark" id="section-1">
+        <h1>Weather</h1>
+      </section>
+      <section class="section s2" id="section-2">
+        <h1>Current Geo-location</h1>
+        <div class="description">
+          <p id="geo-location-p">
+            
+          </p>
+          <!-- <div>
+            <ul>
+              <li id="City"></li>
+              <li id="Coordinates"></li>
+              <li id="Lon"></li>
+              <li id=""></li>
+              <li id=""></li>
+            </ul>
+          </div> -->
+
+          <div class="card container">
+            <div class="card-body text-justify">
+              <ul>
+                <li id="City"></li>
+                <li id="Temperature"></li>
+                <li id="Longitude"></li>
+                <li id="Latitude"></li>
+                <li id="Weather"></li>
+              </ul>
+            </div>
+          </div>
+       
+        </div>
+   
+        <i class="fas fa-clouds chair c2"></i>
+        <i class="fas fa-clouds chair c3"></i>
+        <i class="fas fa-clouds chair c1"></i>
+     
+      </section>
+      <section class="section s3" id="section-3">
+        <h1>Another page</h1>
+      </section>
+  
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+      integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+      integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./fullpage.min.js"></script>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
