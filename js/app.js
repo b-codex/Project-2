@@ -29,35 +29,35 @@ new fullpage("#fullpage", {
 
 // the api
 
-// const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
+const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
 
-// (async function(){
-//     let city = 'london'
+(async function(){
+    let city = 'london'
 
-//     const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
-//     const query = `?q=${city}&appid=${key}&units=metric`;
+    const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
+    const query = `?q=${city}&appid=${key}&units=metric`;
 
-//     //make fetch call (promise call)
-//     const response = await fetch(baseURL + query);
+    //make fetch call (promise call)
+    const response = await fetch(baseURL + query);
 
-//     //promise data
-//     const data = await response.json();
-//     if (data.cod == '404') {
-//         console.log('err')
-//     }
+    //promise data
+    const data = await response.json();
+    if (data.cod == '404') {
+        console.log('err')
+    }
 
-//     let City = document.getElementById('City') 
-//     let Longitude = document.getElementById('Longitude') 
-//     let Latitude = document.getElementById('Latitude') 
-//     let Weather = document.getElementById('Weather') 
-//     let Temperature = document.getElementById('Temperature') 
+    let City = document.getElementById('City') 
+    let Longitude = document.getElementById('Longitude') 
+    let Latitude = document.getElementById('Latitude') 
+    let Weather = document.getElementById('Weather') 
+    let Temperature = document.getElementById('Temperature') 
 
-//     City.innerHTML = `City : ${data.name}`;
-//     Longitude.innerHTML = `Longitude: ${data.coord.lon}`;
-//     Latitude.innerHTML = `Latitude: ${data.coord.lat}`;
-//     Weather.innerHTML = `Current Weather forecast: ${data.weather[0].main}`
-//     Temperature.innerHTML = `City : ${data.main.temp}°C` 
-// })()
+    City.innerHTML = `City : ${data.name}`;
+    Longitude.innerHTML = `Longitude: ${data.coord.lon}`;
+    Latitude.innerHTML = `Latitude: ${data.coord.lat}`;
+    Weather.innerHTML = `Current Weather forecast: ${data.weather[0].main}`
+    Temperature.innerHTML = `City : ${data.main.temp}°C` 
+})()
 
 var geoLocation = document.getElementById("geolocation-heading-one");
 function getLocation() {
