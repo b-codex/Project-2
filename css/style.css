@@ -4,6 +4,7 @@
   box-sizing: border-box;
 
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -13,6 +14,7 @@ body {
   /* background: url("./vid/rainy.mp4"); */
   background-size: cover;
 }
+
 .section h1 {
   font-size: 70px;
   position: absolute;
@@ -27,6 +29,7 @@ body {
 .s2 {
   background: linear-gradient(to left top, rgb(189, 193, 199), white);
 }
+
 .s2 h1 {
   font-size: 48px;
   background: linear-gradient(to left, #404042, #373838);
@@ -40,12 +43,31 @@ body {
   margin-left: 5%;
   font-size: 20px;
 }
+
 .description p {
   margin: 50px 0px;
 }
-ul > li{
+
+ul>li {
   list-style: none;
   text-decoration: none;
-  
+
 }
 
+
+/* Search */
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
