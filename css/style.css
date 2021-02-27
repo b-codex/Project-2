@@ -50,14 +50,15 @@ body {
 
 ul>li {
   list-style: none;
-  text-decoration: none;
+  text-decoration: none; 
 
 }
 
 
 /* Search */
 
-form.example input[type=text] {
+
+/* form.example input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 1px solid grey;
@@ -70,4 +71,4 @@ form.example::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
