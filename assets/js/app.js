@@ -25,6 +25,7 @@ let tempMax = document.querySelector("#tempMax")
 
 let searchForm = document.querySelector(".searchForm")
 let searchBtn = document.querySelector(".searchIcon")
+let hiddenCard = document.querySelector(".section-container")
 
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -80,4 +81,9 @@ searchForm.addEventListener('submit', async (e) => {
     }
 
 
+
+    hiddenCard.style.visibility = "visible"
+    
+    
 })
+hiddenCard.style.visibility = "hidden"

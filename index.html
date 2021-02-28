@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="assets/css/fullpage.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <link rel="shortcut icon" href="assets/img/cloudy.png" type="image/x-icon">
+
+
   <title>My Weather</title>
 
 </head>
@@ -22,26 +25,25 @@
   <div id="fullpage">
 
     <section class="section s1">
+      <h1>Weather</h1>
+      <h6 class=" text-center">Find weather information and more details</h6>
 
       <h1></h1>
 
-      <div class="container">
+      <div class="container d-flex justify-content-center">
 
-        <div class="row col-12 w-100">
+        <div class="row col-12">
 
-          <div class="wrapper">
+          <div class="wrapper mx-auto">
 
             <form class="searchForm">
               <div class="search-input">
-                <input id="search" type="text" placeholder="Search.." name="search">
+                <input id="search" type="text" placeholder="Search a city..." name="search">
                 <div class="autocombox">
-                  <!-- <li> </li>
-                        <li ></li>
-                        <li ></li>
-                        <li></li> -->
+
                 </div>
 
-                <button class="icon searchIcon bt btn-light" id="searchButton" type="submit"><i
+                <button class="icon searchIcon btn btn-light" id="searchButton" type="submit"><i
                     class="fa fa-search"></i></button>
 
               </div>
@@ -50,9 +52,9 @@
 
           </div>
 
-          <div class="row col-12 w-100 text-justify">
+          <div class="row col-12 w-100 text-justify section-container">
 
-            <div class="card w-100">
+            <div class="card w-75 d-flex jusfiy-content-center mx-auto">
               <div class="card-header d-flex justify-content-between">
 
                 <div class="" id="city">City</div>
@@ -62,9 +64,12 @@
               <div class="card-body">
 
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Country <span id="country" class="text-black-50 d-flex justify-content-end"></span></li>
-                  <li class="list-group-item">Temperature <span id="temp" class="text-black-50 d-flex justify-content-end"></span></li>
-                  <li class="list-group-item">Weather Description <span id="weatherDescription" class="text-black-50 d-flex justify-content-end"></span></li>
+                  <li class="list-group-item">Country <span id="country"
+                      class="text-black-50 d-flex justify-content-end"></span></li>
+                  <li class="list-group-item">Temperature <span id="temp"
+                      class="text-black-50 d-flex justify-content-end"></span></li>
+                  <li class="list-group-item">Weather Description <span id="weatherDescription"
+                      class="text-black-50 d-flex justify-content-end"></span></li>
 
                 </ul>
 
@@ -81,9 +86,9 @@
 
     <section class="section s2" id="s2">
 
-      <h1></h1>
+      <h1 class="text-dark">More info..</h1>
 
-      <div class="container">
+      <div class="container section-container">
         <div class="row col-12 w-100 text-justify">
 
           <div class="card w-100">
@@ -96,18 +101,30 @@
             <div class="card-body">
 
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">Country <span id="country2" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Temperature <span id="temp2" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Weather Description <span id="weatherDescription2" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Longitude <span id="longitude" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Latitude <span id="latitude" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Wind Speed <span id="windSpeed" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Wind Direction <span id="windDirection" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Feels Like <span id="feelsLike" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Humidity <span id="humidity" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Pressure <span id="pressure" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Temperature Min <span id="tempMin" class="text-black-50 d-flex justify-content-end"></span></li>
-                <li class="list-group-item">Temperature Max <span id="tempMax" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Country <span id="country2"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature <span id="temp2"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Weather Description <span id="weatherDescription2"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Longitude <span id="longitude"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Latitude <span id="latitude"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Wind Speed <span id="windSpeed"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Wind Direction <span id="windDirection"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Feels Like <span id="feelsLike"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Humidity <span id="humidity"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Pressure <span id="pressure"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature Min <span id="tempMin"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature Max <span id="tempMax"
+                    class="text-black-50 d-flex justify-content-end"></span></li>
 
 
               </ul>
@@ -125,7 +142,7 @@
 
 
     <section class="section s3">
-      <h1>Amazing Quality</h1>
+      <h1>Favorite Location</h1>
     </section>
 
 
