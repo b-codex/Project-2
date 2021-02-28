@@ -26,41 +26,36 @@ window.scrollBy({
 
 document.querySelector(".searchForm").addEventListener('submit', (e) => {
     e.preventDefault()
-    const x = () => {
-        document.querySelector("#section-1 > div > h1").focus()
-        log('1')
-    }
 
+    let city = search.value;
+    const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
 
-        let city = search.value;
-        const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
+    (async function () {
+        // var city = 'addis ababa'
+        // const search_el = document.getElementById('search_el').value
+        const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
+        const query = `?q=${city}&appid=${key}&units=metric`;
 
-        (async function () {
-            // var city = 'addis ababa'
-            // const search_el = document.getElementById('search_el').value
-            const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
-            const query = `?q=${city}&appid=${key}&units=metric`;
+        //make fetch call (promise call)
+        const response = await fetch(baseURL + query);
+        if (response.status === 200) {
+            document.querySelector('#section-2').scrollIntoView({
+                behavior: 'smooth'
+            });
+        } else {
+            console.log(`Error while fetching req ${response.status}`);
+            return;
+        }
+        //promise data
+        const data = await response.json();
+        log(data)
+        City.innerHTML = `City : ${data.name}`;
+        Longitude.innerHTML = `Longitude: ${data.coord.lon}`;
+        Latitude.innerHTML = `Latitude: ${data.coord.lat}`;
+        Weather.innerHTML = `Current Weather forecast: ${data.weather[0].main}`
+        Temperature.innerHTML = `City : ${data.main.temp}°C`
 
-            //make fetch call (promise call)
-            const response = await fetch(baseURL + query);
-            if(response.status === 200){
-                document.querySelector('#section-2').scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-            else{
-                console.log(`Error while fetching req ${response.status}`);
-                return;
-            }
-            //promise data
-            const data = await response.json();
-            City.innerHTML = `City : ${data.name}`;
-            Longitude.innerHTML = `Longitude: ${data.coord.lon}`;
-            Latitude.innerHTML = `Latitude: ${data.coord.lat}`;
-            Weather.innerHTML = `Current Weather forecast: ${data.weather[0].main}`
-            Temperature.innerHTML = `City : ${data.main.temp}°C`
-
-        })()
+    })()
 
 
 })

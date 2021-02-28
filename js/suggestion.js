@@ -62,7 +62,7 @@ let suggestion = [
     "Debre Zebit",
     "Dejen",
     "Delgi",
-    "Dembidolo"
+    "Dembidolo",
     "Deneba",
     "Dessie (Dese)",
     "Dila",
@@ -77,19 +77,19 @@ let suggestion = [
     "Dalocha",
     "Dukem",
     "Danan",
-    
+
     "Ejaji",
     "Elidar",
     "Enewari",
     "Estie",
     "Andabet",
-    
+
     "Finicha",
-    "Fiche",,
+    "Fiche", ,
     "Finote Selam",
     "Freweyni",
-    
-    
+
+
     "Gondar",
     "Gambela",
     "Gelemso",
@@ -103,8 +103,8 @@ let suggestion = [
     "Gongoma",
     "Gore",
     "Gorgora",
-    
-    
+
+
     "Harar",
     "Harar (or Harer)",
     "Hafatissa",
@@ -116,14 +116,14 @@ let suggestion = [
     "Humera",
     "Huruta",
     "Hadero",
-    
+
     "Imi",
-    
+
     "Jijiga",
     "Jimma",
     "Jinka",
     "Jaraged",
-    
+
     "Kabri Dar",
     "Kebri Mangest",
     "Kobo",
@@ -131,13 +131,13 @@ let suggestion = [
     "Konso",
     "Kulubi",
     "Kurmuk",
-    
+
     "Lalibela",
     "Limmu Genet",
     "Lante (Ocholo)",
     "Lante (Ommo)",
-    
-    
+
+
     "Maji",
     "Maqora",
     "Maychew",
@@ -149,14 +149,14 @@ let suggestion = [
     "Mojo",
     "Mota",
     "Moyale",
-    
+
     "Negash",
     "Negele Boran",
     "Nejo",
-    "Nekemte"
-    
+    "Nekemte",
+
     "Robe, Bale",
-    
+
     "Sawla (Gofa Sawla)",
     "Seka",
     " Shashamane",
@@ -167,8 +167,8 @@ let suggestion = [
     "Sodo (Wolaita Sodo)",
     "Sodore",
     "Sekota",
-    
-   " Tefki",
+
+    " Tefki",
     "Tenta",
     "Tippi",
     "Tiya",
@@ -176,7 +176,7 @@ let suggestion = [
     "Turmi",
     "Togo-Wochale",
     "Tulu bolo",
-    
+
     'Wacca',
     "Waliso",
     "Walwal",
@@ -186,14 +186,14 @@ let suggestion = [
     "Wolaita Sodo (Sodo)",
     "Wolleka",
     'Worabe',
-   " Wuchale",
+    " Wuchale",
     "Wukro",
-   " washera",
-    
-   " Yabelo",
+    " washera",
+
+    " Yabelo",
     "Yeha",
     'Yirga Alem',
-    
+
     "Ziway",
 
 
