@@ -34,10 +34,20 @@ body{
     cursor: pointer;
 }
 .search-input .autocombox{
-    /* padding: 10px 8px; */
+    padding: 0px;
     max-height: 290px;
     overflow: auto;
+    opacity: 0;
+    pointer-events: none;
+}
+.search-input.active .autocombox{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
 
+}
+.search-input.active .autocombox li{
+    display: block;
 }
 .autocombox li{
     list-style: none;
