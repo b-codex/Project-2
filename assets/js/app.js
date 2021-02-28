@@ -86,4 +86,4 @@ searchForm.addEventListener('submit', async (e) => {
     
     
 })
-hiddenCard.style.visibility = "hidden"
+// hiddenCard.style.visibility = "hidden"

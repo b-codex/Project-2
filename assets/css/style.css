@@ -64,6 +64,7 @@ body {
   left: 50%;
   transform: translate(-50%, -20%);
   background: linear-gradient(to left, #73c8da, #20ade0);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
