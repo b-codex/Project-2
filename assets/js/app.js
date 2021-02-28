@@ -43,7 +43,7 @@ searchForm.addEventListener('submit', async (e) => {
     const data = await response.json();
 
     if (data.cod === 200) {
-        log(data.wind)
+        // log(data.wind)
         //promise data
 
 
@@ -63,8 +63,8 @@ searchForm.addEventListener('submit', async (e) => {
         feelsLike.innerText = data.main.feels_like + ' °C'
         humidity.innerText = data.main.humidity
         pressure.innerText = data.main.pressure
-        tempMin.innerText = data.main.temp_min
-        tempMax.innerText = data.main.temp_max
+        tempMin.innerText = data.main.temp_min + ' °C'
+        tempMax.innerText = data.main.temp_max + ' °C'
 
         cityName2.innerText = data.name
         weatherIcon2.src = icon
@@ -73,6 +73,7 @@ searchForm.addEventListener('submit', async (e) => {
         weatherDescription2.innerHTML = data.weather[0].main
 
 
+        hiddenCard.style.visibility = "visible"
 
         searchForm.reset()
     } else {
@@ -82,7 +83,6 @@ searchForm.addEventListener('submit', async (e) => {
 
 
 
-    hiddenCard.style.visibility = "visible"
     
     
 })
