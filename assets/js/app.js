@@ -39,46 +39,45 @@ searchForm.addEventListener('submit', async (e) => {
 
     //make fetch call (promise call)
     const response = await fetch(baseURL + query);
-    // if (response.status === 200) {
-    //     document.querySelector('#section-2').scrollIntoView({
-    //         behavior: 'smooth'
-    //     });
-    // } else {
-    //     console.log(`Error while fetching req ${response.status}`);
-    //     return;
-    // }
-    //promise data
     const data = await response.json();
 
-    log(data.wind)
-
-    let icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
-
-    cityName.innerText = data.name
-    weatherIcon.src = icon
-    country.innerHTML = data.sys.country
-    temp.innerHTML = data.main.temp + ' °C'
-    weatherDescription.innerHTML = data.weather[0].main
+    if (data.cod === 200) {
+        log(data.wind)
+        //promise data
 
 
-    longitude.innerText = data.coord.lon
-    latitude.innerText = data.coord.lat
-    windSpeed.innerText = data.wind.speed
-    windDirection.innerText = data.wind.deg + ' deg'
-    feelsLike.innerText = data.main.feels_like + ' °C'
-    humidity.innerText = data.main.humidity
-    pressure.innerText = data.main.pressure
-    tempMin.innerText = data.main.temp_min
-    tempMax.innerText = data.main.temp_max
+        let icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
 
-    cityName2.innerText = data.name
-    weatherIcon2.src = icon
-    country2.innerHTML = data.sys.country
-    temp2.innerHTML = data.main.temp + ' °C'
-    weatherDescription2.innerHTML = data.weather[0].main
+        cityName.innerText = data.name
+        weatherIcon.src = icon
+        country.innerHTML = data.sys.country
+        temp.innerHTML = data.main.temp + ' °C'
+        weatherDescription.innerHTML = data.weather[0].main
 
 
+        longitude.innerText = data.coord.lon
+        latitude.innerText = data.coord.lat
+        windSpeed.innerText = data.wind.speed
+        windDirection.innerText = data.wind.deg + ' deg'
+        feelsLike.innerText = data.main.feels_like + ' °C'
+        humidity.innerText = data.main.humidity
+        pressure.innerText = data.main.pressure
+        tempMin.innerText = data.main.temp_min
+        tempMax.innerText = data.main.temp_max
 
-    searchForm.reset()
+        cityName2.innerText = data.name
+        weatherIcon2.src = icon
+        country2.innerHTML = data.sys.country
+        temp2.innerHTML = data.main.temp + ' °C'
+        weatherDescription2.innerHTML = data.weather[0].main
+
+
+
+        searchForm.reset()
+    } else {
+        log(data)
+        alert('Error')
+    }
+
 
 })

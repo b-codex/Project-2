@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -11,6 +12,7 @@ body {
   background-image: url("../img/couch.jpg");
   background-size: cover;
 }
+
 .section h1 {
   font-size: 64px;
   position: absolute;
@@ -25,6 +27,7 @@ body {
 .s2 {
   background: linear-gradient(to left top, rgb(189, 193, 199), white);
 }
+
 .s2 h1 {
   font-size: 48px;
   background: linear-gradient(to left, #404042, #373838);
@@ -46,6 +49,7 @@ body {
   margin-left: 5%;
   font-size: 20px;
 }
+
 .description p {
   margin: 50px 0px;
 }
@@ -86,7 +90,7 @@ body {
 
 ul>li {
   list-style: none;
-  text-decoration: none; 
+  text-decoration: none;
 
 }
 
@@ -109,21 +113,24 @@ form.example::after {
   display: table;
 }
 
-body{
+body {
   background-color: aqua;
 }
-.wrapper{
+
+.wrapper {
   max-width: 450px;
   margin: 150px auto;
 }
-.wrapper .search-input{
+
+.wrapper .search-input {
   position: relative;
   background: #fff;
   width: 100%;
   border-radius: 5px;
-  box-shadow: 0px 1px 5px 3px rgba(0, 0,0, 0.12);
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
 }
-.search-input input{
+
+.search-input input {
   height: 55px;
   width: 100%;
   outline: none;
@@ -131,9 +138,10 @@ body{
   border-radius: 5px;
   padding-left: 0 60px 0 20px;
   font-size: 18px;
-  box-shadow: 0px 1px 5px 3px rgba(0, 0,0, 0.12)
+  box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12)
 }
-.search-input .icon{
+
+.search-input .icon {
   height: 55px;
   width: 55px;
   line-height: 55px;
@@ -145,7 +153,8 @@ body{
   color: tomato;
   cursor: pointer;
 }
-.search-input .autocombox{
+
+.search-input .autocombox {
   padding: 0px;
   max-height: 290px;
   overflow: auto;
@@ -153,16 +162,19 @@ body{
   pointer-events: none;
 
 }
-.search-input.active .autocombox{
+
+.search-input.active .autocombox {
   padding: 10px 8px;
   opacity: 1;
   pointer-events: auto;
   /* display: block; */
 }
-.search-input.active .autocombox li{
+
+.search-input.active .autocombox li {
   display: block;
 }
-.autocombox li{
+
+.autocombox li {
   list-style: none;
   padding: 8px 12px;
   width: 100%;
@@ -170,24 +182,27 @@ body{
   border-radius: 3px;
   display: none;
 }
-.autocombox li:hover{
+
+.autocombox li:hover {
   background: #434343;
 }
 
-input::placeholder, input{
+input::placeholder,
+input {
   padding: 1rem;
 }
 
-#searchButton{
+#searchButton {
   padding: 0;
   border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  outline: none !important;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-.card-header{
+.card-header {
   font-size: larger;
 }
