@@ -2,118 +2,156 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./css/fullpage.min.css" />
-  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/serach.css">
 
-  <title>Weather Website</title>
-  <link rel="shortcut icon" href="img/cloudy.png" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/fullpage.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
+  <title>My Weather</title>
 
 </head>
 
 <body>
+
   <div id="fullpage">
-    <section class="section s1 bg-dark" id="section-1">
-      <h1>Weather</h1>
-      <!-- 
-        <div class="container d-flex justify-content-center w-100">
 
-          <input type="text" placeholder="Search.." name="search" id="search">
+    <section class="section s1">
 
+      <h1></h1>
 
-        </div> -->
-      <div class="wrapper">
-        <form class="searchForm">
-          <div class="search-input">
-            <input id="search" type="text" placeholder="Search.." name="search">
-            <div class="autocombox">
-              <!-- <li> </li>
-                  <li ></li>
-                  <li ></li>
-                  <li></li> -->
-            </div>
+      <div class="container">
 
-            <button class="icon searchIcon btn" type="submit"><i class="fa fa-search"></i></button>
+        <div class="row col-12 w-100">
+
+          <div class="wrapper">
+
+            <form class="searchForm">
+              <div class="search-input">
+                <input id="search" type="text" placeholder="Search.." name="search">
+                <div class="autocombox">
+                  <!-- <li> </li>
+                        <li ></li>
+                        <li ></li>
+                        <li></li> -->
+                </div>
+
+                <button class="icon searchIcon bt btn-light" id="searchButton" type="submit"><i
+                    class="fa fa-search"></i></button>
+
+              </div>
+
+            </form>
 
           </div>
-        </form>
-      </div>
 
+          <div class="row col-12 w-100 text-justify">
 
+            <div class="card w-100">
+              <div class="card-header d-flex justify-content-between">
 
-    </section>
-    <section class="section s2" id="section-2">
-      <h1 id="geolocation-heading-one">Geo-location information</h1>
-      <button class="btn btn-dark"></button>
+                <div class="" id="city">City</div>
+                <img id="weatherIcon" src="" alt="">
 
-      <div class="description">
+              </div>
+              <div class="card-body">
 
-        <div class="card container">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Country <span id="country" class="text-black-50 d-flex justify-content-end"></span></li>
+                  <li class="list-group-item">Temperature <span id="temp" class="text-black-50 d-flex justify-content-end"></span></li>
+                  <li class="list-group-item">Weather Description <span id="weatherDescription" class="text-black-50 d-flex justify-content-end"></span></li>
 
-          <div class="card-body text-justify">
+                </ul>
 
-            <ul>
-              <li id="City"></li>
-              <li id="Temperature"></li>
-              <li id="Longitude"></li>
-              <li id="Latitude"></li>
-              <li id="Weather"></li>
-            </ul>
-
+                <a href="#" class="btn btn-info w-100 text-center">See Details</a>
+              </div>
+            </div>
           </div>
 
         </div>
-
       </div>
 
-      <i class="fas fa-clouds chair c2"></i>
-      <i class="fas fa-clouds chair c3"></i>
-      <i class="fas fa-clouds chair c1"></i>
+    </section>
+
+
+    <section class="section s2" id="s2">
+
+      <h1></h1>
+
+      <div class="container">
+        <div class="row col-12 w-100 text-justify">
+
+          <div class="card w-100">
+            <div class="card-header d-flex justify-content-between">
+
+              <div class="" id="city2">City</div>
+              <img id="weatherIcon2" src="" alt="">
+
+            </div>
+            <div class="card-body">
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Country <span id="country2" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature <span id="temp2" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Weather Description <span id="weatherDescription2" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Longitude <span id="longitude" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Latitude <span id="latitude" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Wind Speed <span id="windSpeed" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Wind Direction <span id="windDirection" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Feels Like <span id="feelsLike" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Humidity <span id="humidity" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Pressure <span id="pressure" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature Min <span id="tempMin" class="text-black-50 d-flex justify-content-end"></span></li>
+                <li class="list-group-item">Temperature Max <span id="tempMax" class="text-black-50 d-flex justify-content-end"></span></li>
+
+
+              </ul>
+
+              <a href="#" class="btn btn-info w-100 text-center">Add To Favorites</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
     </section>
 
 
-    <section class="section s3" id="section-3">
 
-      <h1>Another page</h1>
-
+    <section class="section s3">
+      <h1>Amazing Quality</h1>
     </section>
+
+
+
+
 
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
     integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
 
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
     integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-      integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous">
-    </script> -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 
-  <script src="js/fullpage.min.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/search.js"></script>
-  <script src="js/suggestion.js"></script>
-  <script src="js/script.js"></script>
+  <script src="assets/js/fullpage.min.js"></script>
+  <script src="assets/js/fullPage.js"></script>
+
+  <script src="assets/js/app.js"></script>
+
 </body>
 
 </html>
