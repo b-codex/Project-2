@@ -7,7 +7,7 @@ let Latitude = document.getElementById('Latitude')
 let Weather = document.getElementById('Weather')
 let Temperature = document.getElementById('Temperature')
 
-
+let searchBtn = document.querySelector(".icon")
 
 // Scroll to specific values
 // scrollTo is the same
@@ -24,19 +24,15 @@ window.scrollBy({
     behavior: 'smooth'
 });
 
-search.addEventListener('keyup', (e) => {
+document.querySelector(".searchForm").addEventListener('submit', (e) => {
+    e.preventDefault()
     const x = () => {
         document.querySelector("#section-1 > div > h1").focus()
         log('1')
     }
-    if (e.keyCode === 13) {
-        e.preventDefault()
 
-        document.querySelector('#section-2').scrollIntoView({
-            behavior: 'smooth'
-        });
 
-        let city = e.target.value
+        let city = search.value;
         const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
 
         (async function () {
@@ -47,13 +43,17 @@ search.addEventListener('keyup', (e) => {
 
             //make fetch call (promise call)
             const response = await fetch(baseURL + query);
-
+            if(response.status === 200){
+                document.querySelector('#section-2').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+            else{
+                console.log(`Error while fetching req ${response.status}`);
+                return;
+            }
             //promise data
             const data = await response.json();
-            if (data.cod == '404') {
-                console.log('err')
-            }
-            log(data)
             City.innerHTML = `City : ${data.name}`;
             Longitude.innerHTML = `Longitude: ${data.coord.lon}`;
             Latitude.innerHTML = `Latitude: ${data.coord.lat}`;
@@ -62,5 +62,5 @@ search.addEventListener('keyup', (e) => {
 
         })()
 
-    }
+
 })
