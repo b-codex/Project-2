@@ -103,3 +103,49 @@ searchForm.addEventListener('submit', async (e) => {
     
 })
 // hiddenCard.style.visibility = "hidden";
+if (data.cod === 200) {
+        // log(data.wind)
+        //promise data
+
+
+        let icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+
+        cityName.innerText = data.name
+        weatherIcon.src = icon
+        country.innerHTML = data.sys.country
+        temp.innerHTML = data.main.temp + ' °C'
+        weatherDescription.innerHTML = data.weather[0].main
+
+
+        longitude.innerText = data.coord.lon
+        latitude.innerText = data.coord.lat
+        windSpeed.innerText = data.wind.speed
+        windDirection.innerText = data.wind.deg + ' deg'
+        feelsLike.innerText = data.main.feels_like + ' °C'
+        humidity.innerText = data.main.humidity
+        pressure.innerText = data.main.pressure
+        tempMin.innerText = data.main.temp_min + ' °C'
+        tempMax.innerText = data.main.temp_max + ' °C'
+
+        cityName2.innerText = data.name
+        weatherIcon2.src = icon
+        country2.innerHTML = data.sys.country
+        temp2.innerHTML = data.main.temp + ' °C'
+        weatherDescription2.innerHTML = data.weather[0].main
+
+        cityName3.innerText = data.name
+        weatherIcon3.src = icon
+        country3.innerHTML = data.sys.country
+        temp3.innerHTML = data.main.temp + ' °C'
+        weatherDescription3.innerHTML = data.weather[0].main
+
+
+        // hiddenCard.style.visibility = "visible"
+        // hiddenCard1.style.visibility = "visible"
+        
+
+        searchForm.reset()
+    } else {
+        log(data)
+        alert('Error')
+    }
