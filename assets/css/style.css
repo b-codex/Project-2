@@ -222,3 +222,6 @@ section h6 {
   text-transform: lowercase;
   
 }
+.section .s2{
+  overflow-y: hidden;
+}
