@@ -10,6 +10,13 @@ let country2 = document.querySelector("#country2")
 let temp2 = document.querySelector("#temp2")
 let weatherDescription2 = document.querySelector("#weatherDescription2")
 
+let cityName3 = document.querySelector("#city3")
+let weatherIcon3 = document.querySelector('#weatherIcon3')
+let country3 = document.querySelector("#country3")
+let temp3 = document.querySelector("#temp3")
+let weatherDescription3 = document.querySelector("#weatherDescription3")
+
+
 let temp = document.querySelector("#temp")
 let weatherDescription = document.querySelector("#weatherDescription")
 let longitude = document.querySelector("#longitude")
@@ -26,6 +33,7 @@ let tempMax = document.querySelector("#tempMax")
 let searchForm = document.querySelector(".searchForm")
 let searchBtn = document.querySelector(".searchIcon")
 let hiddenCard = document.querySelector(".section-container")
+let hiddenCard1 = document.querySelector(".section-container1")
 
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -72,18 +80,26 @@ searchForm.addEventListener('submit', async (e) => {
         temp2.innerHTML = data.main.temp + ' °C'
         weatherDescription2.innerHTML = data.weather[0].main
 
+        cityName3.innerText = data.name
+        weatherIcon3.src = icon
+        country3.innerHTML = data.sys.country
+        temp3.innerHTML = data.main.temp + ' °C'
+        weatherDescription3.innerHTML = data.weather[0].main
 
-        hiddenCard.style.visibility = "visible"
+
+        // hiddenCard.style.visibility = "visible"
+        // hiddenCard1.style.visibility = "visible"
+        
 
         searchForm.reset()
     } else {
         log(data)
         alert('Error')
     }
-
-
-
+    
+    
+    
     
     
 })
-// hiddenCard.style.visibility = "hidden"
+// hiddenCard.style.visibility = "hidden";

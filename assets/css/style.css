@@ -7,11 +7,16 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+#hfont{
+  font-size: 80px;
+  left: 10%;
+  color: linear-gradient(to left, #c29374, #af7743) !important;
 
+}
 .s1 {
   background-image: url("../img/bg.jfif");
   background-size: cover;
-}
+  }
 
 .section h1 {
   font-size: 64px;
