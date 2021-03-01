@@ -15,8 +15,8 @@ body {
 
 .section h1 {
   font-size: 64px;
-  position: absolute;
-  top: 10%;
+  position: relative;
+  top: 10% !important;
   left: 50%;
   transform: translate(-50%, -20%);
   background: linear-gradient(to left, #87c7df, #648896);
@@ -128,11 +128,15 @@ body {
 }
 
 .wrapper .search-input {
+  height: 50px;
   position: relative;
   background: #fff;
   width: 100%;
   border-radius: 5px;
   box-shadow: 0px 1px 5px 3px rgba(0, 0, 0, 0.12);
+}
+.searchForm{
+  top: 50%;
 }
 
 .search-input input {
@@ -222,6 +226,13 @@ section h6 {
   text-transform: lowercase;
   
 }
-.section .s2{
-  overflow-y: hidden;
+.list-group-item{
+  padding:0px !important;
+  margin: 0px !important;
+}
+@media (max-width:1208px){
+  #weaTxt{
+    display: none;
+  }
+  
 }
