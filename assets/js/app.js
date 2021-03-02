@@ -35,6 +35,10 @@ let searchBtn = document.querySelector(".searchIcon")
 let hiddenCard = document.querySelector(".section-container")
 let hiddenCard1 = document.querySelector(".section-container1")
 
+let addFav = document.querySelector("#addFav")
+let favRow = document.querySelector('#favRow')
+let favContainer = document.querySelector('#favContainer')
+
 searchForm.addEventListener('submit', async (e) => {
     e.preventDefault()
 
@@ -80,72 +84,40 @@ searchForm.addEventListener('submit', async (e) => {
         temp2.innerHTML = data.main.temp + ' °C'
         weatherDescription2.innerHTML = data.weather[0].main
 
-        cityName3.innerText = data.name
-        weatherIcon3.src = icon
-        country3.innerHTML = data.sys.country
-        temp3.innerHTML = data.main.temp + ' °C'
-        weatherDescription3.innerHTML = data.weather[0].main
+        // cityName3.innerText = data.name
+        // weatherIcon3.src = icon
+        // country3.innerHTML = data.sys.country
+        // temp3.innerHTML = data.main.temp + ' °C'
+        // weatherDescription3.innerHTML = data.weather[0].main
 
 
         // hiddenCard.style.visibility = "visible"
         // hiddenCard1.style.visibility = "visible"
-        
+
 
         searchForm.reset()
     } else {
         log(data)
         alert('Error')
     }
-    
-    
-    
-    
-    
+
+
+
+
+
 })
-// hiddenCard.style.visibility = "hidden";
-if (data.cod === 200) {
-        // log(data.wind)
-        //promise data
 
+addFav.addEventListener('click', add_Fav)
 
-        let icon = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
+function add_Fav() {
 
-        cityName.innerText = data.name
-        weatherIcon.src = icon
-        country.innerHTML = data.sys.country
-        temp.innerHTML = data.main.temp + ' °C'
-        weatherDescription.innerHTML = data.weather[0].main
+    let clone = document.querySelector('#introCard').cloneNode(true)
+    clone.setAttribute('id', '')
+    clone.classList.remove('w-75')
+    clone.classList.add('col-md-3', 'col-12', 'w-100')
 
+    favContainer.append(clone)
+    // favRow.append(favContainer)
 
-        longitude.innerText = data.coord.lon
-        latitude.innerText = data.coord.lat
-        windSpeed.innerText = data.wind.speed
-        windDirection.innerText = data.wind.deg + ' deg'
-        feelsLike.innerText = data.main.feels_like + ' °C'
-        humidity.innerText = data.main.humidity
-        pressure.innerText = data.main.pressure
-        tempMin.innerText = data.main.temp_min + ' °C'
-        tempMax.innerText = data.main.temp_max + ' °C'
-
-        cityName2.innerText = data.name
-        weatherIcon2.src = icon
-        country2.innerHTML = data.sys.country
-        temp2.innerHTML = data.main.temp + ' °C'
-        weatherDescription2.innerHTML = data.weather[0].main
-
-        cityName3.innerText = data.name
-        weatherIcon3.src = icon
-        country3.innerHTML = data.sys.country
-        temp3.innerHTML = data.main.temp + ' °C'
-        weatherDescription3.innerHTML = data.weather[0].main
-
-
-        // hiddenCard.style.visibility = "visible"
-        // hiddenCard1.style.visibility = "visible"
-        
-
-        searchForm.reset()
-    } else {
-        log(data)
-        alert('Error')
-    }
+    favRow.classList.remove('visibility-hidden')
+}

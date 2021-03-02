@@ -291,3 +291,35 @@ section h6 {
 .imgHeader{
   flex-direction: row;
 }
+
+
+/* Custom Classes */
+
+.display-none{
+  display: none !important;
+}
+
+.display-block{
+  display: block !important;
+}
+
+.visibility-visible{
+  visibility: visible !important;
+}
+
+.visibility-hidden{
+  visibility: hidden !important;
+}
+
+#favContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center; 
+}
+
+.card-header{
+  background-color: white !important;
+}
