@@ -98,7 +98,7 @@ searchForm.addEventListener('submit', async (e) => {
         searchForm.reset()
     } else {
         log(data)
-        alert('Error')
+        alert('Invalid City Name')
     }
 
 
@@ -114,7 +114,7 @@ function add_Fav() {
     let clone = document.querySelector('#introCard').cloneNode(true)
     clone.setAttribute('id', '')
     clone.classList.remove('w-75')
-    clone.classList.add('col-md-3', 'col-12', 'w-100')
+    clone.classList.add('col-md-6', 'col-12', 'w-100')
 
     favContainer.append(clone)
     // favRow.append(favContainer)
