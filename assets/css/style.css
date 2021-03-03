@@ -238,11 +238,13 @@ section h6 {
   padding:0px !important;
   margin: 0px !important;
 }
+
 @media (max-width:1208px){
   #weaTxt{
     display: none;
+    
   }
-  
+   
 }
 
 .s4 {
@@ -269,7 +271,7 @@ section h6 {
 }
 .img-circle {
   border-radius: 0;
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/clutch.png);
 }
 
 .ratio {
@@ -328,4 +330,24 @@ section h6 {
 
 .card-header{
   background-color: white !important;
+}
+
+/* about */
+/* #aboutcon{
+  display: block !important;
+} */
+/* .ratio .img-responsive .img-circle{
+  display: block !important;
+} */
+@media (max-width:768px){
+  #aboutcon{
+    visibility: none;
+  }
+  
+}
+@media (max-width:1250px){
+  .ratio .img-responsive .img-circle{
+    visibility: none;
+  }
+  
 }
