@@ -26,3 +26,8 @@ let seeDetails = document.querySelector('#seeDetails')
 seeDetails.addEventListener('click', () => {
   fullpage_api.moveTo(2)
 })
+ let favs = document.querySelector('#addFav')
+
+ favs.addEventListener('click', () => {
+  fullpage_api.moveTo(3)
+})
