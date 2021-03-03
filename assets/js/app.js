@@ -112,7 +112,8 @@ addFav.addEventListener('click', add_Fav)
 function add_Fav() {
 
     let clone = document.querySelector('#introCard').cloneNode(true)
-    clone.setAttribute('id', '')
+    clone.setAttribute('id', 'favcards')
+    clone.setAttribute('class', 'favcards card mx-auto ml-3 mr-2 col-md-6 col-12 w-100 ml-5')
     clone.classList.remove('w-75')
     clone.classList.add('col-md-6', 'col-12', 'w-100', 'ml-5')
 
@@ -123,6 +124,10 @@ function add_Fav() {
     let seeDetails = document.querySelector('#seeDetails')
 
     seeDetails.addEventListener('click', () => {
+        fullpage_api.moveTo(2)
+    })
+    let favcards = document.querySelector('#favcards')
+    favcards.addEventListener('click', () => {
         fullpage_api.moveTo(2)
     })
 }

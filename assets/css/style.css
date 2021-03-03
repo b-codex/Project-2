@@ -12,6 +12,10 @@ body {
 .s4 h1{
   color:white !important;
 }
+.favcards #seeDetails{
+  display: none;
+  margin-left: 2px;
+}
 .s1 {
   background-image: url("../img/bg.jfif");
   background-size: cover;
