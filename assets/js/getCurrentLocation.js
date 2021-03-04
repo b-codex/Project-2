@@ -1,3 +1,5 @@
+// Selectors
+
 log = console.log
 
 cityName = document.querySelector("#city")
@@ -28,26 +30,21 @@ searchBtn = document.querySelector(".searchIcon")
 hiddenCard = document.querySelector(".section-container")
 
 
-hiddenCard.style.visibility = "hidden"
-
+// Location getting options
 var options = {
     enableHighAccuracy: true,
     timeout: 10000,
     maximumAge: 0
-};
+}
 
+// success function for navigator geolocation
 async function success(pos) {
     let crd = pos.coords;
 
-    // console.log('Your current position is:');
-    // console.log(`Latitude : ${crd.latitude}`);
-    // console.log(`Longitude: ${crd.longitude}`);
-    // console.log(`More or less ${crd.accuracy} meters.`);
-
+    // API Key
     const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
 
-    // var city = 'addis ababa'
-    // const search_el = document.getElementById('search_el').value
+    // URI for fetch API
     const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
     const query = `?lat=${crd.latitude}&lon=${crd.longitude}&appid=${key}&units=metric`;
 
@@ -55,8 +52,7 @@ async function success(pos) {
     const response = await fetch(baseURL + query);
     const data = await response.json();
 
-    if (data.cod === 200) {
-        // log(data.wind)
+    if (data.cod === 200) { //if data.cod === 200 (success), execute the block
         //promise data
 
 
@@ -97,7 +93,11 @@ async function success(pos) {
 }
 
 function error(err) {
+    // if error occurs, the 1st card will not be displayed
+    hiddenCard.classList.add('visibility-hidden')
+
     console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
+// BOM navigator element
 navigator.geolocation.getCurrentPosition(success, error, options);
