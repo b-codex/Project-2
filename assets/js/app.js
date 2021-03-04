@@ -98,7 +98,7 @@ searchForm.addEventListener('submit', async (e) => {
         searchForm.reset()
     } else {
         log(data)
-        alert('Error')
+        alert('Invalid City Name')
     }
 
 })
