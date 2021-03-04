@@ -28,7 +28,6 @@ searchBtn = document.querySelector(".searchIcon")
 hiddenCard = document.querySelector(".section-container")
 
 
-hiddenCard.style.visibility = "hidden"
 
 var options = {
     enableHighAccuracy: true,
@@ -39,15 +38,10 @@ var options = {
 async function success(pos) {
     let crd = pos.coords;
 
-    // console.log('Your current position is:');
-    // console.log(`Latitude : ${crd.latitude}`);
-    // console.log(`Longitude: ${crd.longitude}`);
-    // console.log(`More or less ${crd.accuracy} meters.`);
 
     const key = '87edfe8fa9d769d1fdc98d83269a9b9b';
 
-    // var city = 'addis ababa'
-    // const search_el = document.getElementById('search_el').value
+
     const baseURL = 'https://api.openweathermap.org/data/2.5/weather'
     const query = `?lat=${crd.latitude}&lon=${crd.longitude}&appid=${key}&units=metric`;
 
@@ -97,6 +91,8 @@ async function success(pos) {
 }
 
 function error(err) {
+    hiddenCard.classList.add('visibility-hidden')
+
     console.warn(`ERROR(${err.code}): ${err.message}`);
 }
 
