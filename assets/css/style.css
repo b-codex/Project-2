@@ -6,6 +6,10 @@
 
 .autocombox {
   background-color: aliceblue;
+
+}
+.autocombox:hover{
+  background-color: aliceblue;
 }
 
 body {
@@ -210,7 +214,8 @@ body {
 }
 
 .autocombox li:hover {
-  background: #434343;
+  background: rgb(190, 190, 190);
+
 }
 
 input::placeholder,
