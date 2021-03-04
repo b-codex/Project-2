@@ -1,3 +1,5 @@
+log = console.log
+
 TweenMax.defaultEase = Linear.easeOut;
 
 new fullpage("#fullpage", {
@@ -22,7 +24,13 @@ new fullpage("#fullpage", {
 });
 
 let seeDetails = document.querySelector('#seeDetails')
+addFav = document.querySelector("#addFav")
+
 
 seeDetails.addEventListener('click', () => {
   fullpage_api.moveTo(2)
+})
+
+addFav.addEventListener('click', () => {
+  fullpage_api.moveTo(3)
 })

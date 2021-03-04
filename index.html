@@ -141,9 +141,18 @@
 
 
     <section class="section s3">
-      <h1>Favorite Location</h1>
+      <h1>Favorite Locations</h1>
 
-      <div class="row col-12 w-100 text-justify visibility-hidden" id="favRow">
+      <div class="row col-12 w-100 text-justify" id="favRow">
+
+        <div class="container my-4">
+
+          <div class="row d-flex justify-content-around w-100">
+            <button type="button" class="btn btn-success" onclick="loadFavFromLocalStorage()">Refresh Favorites</button>
+            <button type="button" class="btn btn-danger visibility-hidden" onclick="deleteFavFromLocalStorage()">Delete Favorites</button>
+          </div>
+
+        </div>
 
         <div class="container" id="favContainer">
 
