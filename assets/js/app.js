@@ -94,11 +94,11 @@ searchForm.addEventListener('submit', async (e) => {
         // hiddenCard.style.visibility = "visible"
         // hiddenCard1.style.visibility = "visible"
 
-        hiddenCard.classList.remove('visibility-hidden')
+
         searchForm.reset()
     } else {
         log(data)
-        alert('Error')
+        alert('Invalid City Name')
     }
 
 })
