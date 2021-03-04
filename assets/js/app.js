@@ -156,7 +156,7 @@ function loadFavFromLocalStorage() {
                 </div>
             </div>
         `
-        document.querySelector("#favRow > div.container.my-4 > div > button.btn.btn-danger").classList.remove('visibility-hidden')
+        document.querySelector("#favRow > div.container.my-4 > div > button.btn.btn-outline-danger").classList.remove('visibility-hidden')
         favContainer.innerHTML += fav
         favRow.classList.remove('visibility-hidden')
 
@@ -177,7 +177,7 @@ loadFavFromLocalStorage()
 function deleteFavFromLocalStorage() {
     localStorage.clear()
     loadFavFromLocalStorage()
-    document.querySelector("#favRow > div.container.my-4 > div > button.btn.btn-danger").classList.add('visibility-hidden')
+    document.querySelector("#favRow > div.container.my-4 > div > button.btn.btn-outline-danger").classList.add('visibility-hidden')
 }
 
 // delete a specific city from favorites
