@@ -25,7 +25,7 @@ function searchLocation(){
         emptyArray = emptyArray.map((data)=>{
             return data = '<li>'+ data + '</li>'
         })
-        console.log(emptyArray);
+        
         searchWrapper.classList.add("active"); // show autocomplete box
         showSuggestions(emptyArray);
         let allList = suggestBox.querySelectorAll("li");
